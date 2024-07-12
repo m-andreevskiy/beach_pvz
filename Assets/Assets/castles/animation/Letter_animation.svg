@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1152"
+   height="128"
+   viewBox="0 0 304.79998 33.866668"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="Letter_animation.svg"
+   inkscape:export-filename="C:\Users\meek0\UnityProjects\GameJam_07_2024\Assets\Assets\castles\animation\r_highlight.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:pageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="128px"
+     inkscape:snap-global="true"
+     inkscape:snap-page="true"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:zoom="0.45254834"
+     inkscape:cx="397.74756"
+     inkscape:cy="384.48931"
+     inkscape:window-width="1680"
+     inkscape:window-height="987"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer5"
+     inkscape:lockguides="true">
+    <sodipodi:guide
+       position="17.638889,50.459365"
+       orientation="-1,0"
+       id="guide23778"
+       inkscape:label=""
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="9.5477526,16.227778"
+       orientation="0,1"
+       id="guide23780"
+       inkscape:label=""
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="220.13335,16.933332"
+       orientation="-1,0"
+       id="guide1272"
+       inkscape:label=""
+       inkscape:locked="true"
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Boarder"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <rect
+       style="fill:#333333;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect848"
+       width="33.866669"
+       height="33.866669"
+       x="5.3290705e-15"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#5b5b5b;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect855"
+       width="33.866669"
+       height="33.866669"
+       x="33.866669"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#868686;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect861"
+       width="33.866669"
+       height="33.866669"
+       x="67.733337"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#c1c1c1;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect867"
+       width="33.866669"
+       height="33.866669"
+       x="101.60001"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#333333;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1498"
+       width="33.866669"
+       height="33.866669"
+       x="5.3290705e-15"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#5b5b5b;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1500"
+       width="33.866669"
+       height="33.866669"
+       x="33.866669"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#868686;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1502"
+       width="33.866669"
+       height="33.866669"
+       x="67.733337"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#c1c1c1;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1504"
+       width="33.866669"
+       height="33.866669"
+       x="101.60001"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#333333;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1508"
+       width="33.866669"
+       height="33.866669"
+       x="270.93335"
+       y="5.3290705e-15" />
+    <rect
+       style="fill:#5b5b5b;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1510"
+       width="33.866669"
+       height="33.866669"
+       x="237.06668"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#868686;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1512"
+       width="33.866669"
+       height="33.866669"
+       x="203.20001"
+       y="5.3290705e-15" />
+    <rect
+       style="fill:#c1c1c1;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1514"
+       width="33.866669"
+       height="33.866669"
+       x="169.33334"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#e7e7e7;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1516"
+       width="33.866669"
+       height="33.866669"
+       x="135.46667"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#333333;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1518"
+       width="33.866669"
+       height="33.866669"
+       x="270.93335"
+       y="5.3290705e-15" />
+    <rect
+       style="fill:#5b5b5b;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1520"
+       width="33.866669"
+       height="33.866669"
+       x="237.06668"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#868686;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1522"
+       width="33.866669"
+       height="33.866669"
+       x="203.20001"
+       y="5.3290705e-15" />
+    <rect
+       style="fill:#c1c1c1;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1524"
+       width="33.866669"
+       height="33.866669"
+       x="169.33334"
+       y="2.6645353e-15" />
+    <rect
+       style="fill:#e7e7e7;fill-opacity:0.347079;stroke:#c5c5c5;stroke-width:2.64583;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:31.75, 31.75;stroke-dashoffset:0;stroke-opacity:1;paint-order:stroke fill markers"
+       id="rect1526"
+       width="33.866669"
+       height="33.866669"
+       x="135.46667"
+       y="2.6645353e-15" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="letterQ"
+     style="display:inline"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="5.4473948"
+       y="25.64942"
+       id="text2322"><tspan
+         sodipodi:role="line"
+         id="tspan2320"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="5.4473948"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="39.314064"
+       y="25.64942"
+       id="text859"><tspan
+         sodipodi:role="line"
+         id="tspan857"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="39.314064"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="73.180733"
+       y="25.64942"
+       id="text865"><tspan
+         sodipodi:role="line"
+         id="tspan863"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="73.180733"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="107.04741"
+       y="25.64942"
+       id="text875"><tspan
+         sodipodi:role="line"
+         id="tspan873"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="107.04741"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="276.38074"
+       y="25.64942"
+       id="text1530"><tspan
+         sodipodi:role="line"
+         id="tspan1528"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="276.38074"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="242.51407"
+       y="25.64942"
+       id="text1534"><tspan
+         sodipodi:role="line"
+         id="tspan1532"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="242.51407"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="208.6474"
+       y="25.64942"
+       id="text1538"><tspan
+         sodipodi:role="line"
+         id="tspan1536"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="208.6474"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="174.78073"
+       y="25.64942"
+       id="text1542"><tspan
+         sodipodi:role="line"
+         id="tspan1540"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="174.78073"
+         y="25.64942">Q</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="140.91406"
+       y="25.64942"
+       id="text1546"><tspan
+         sodipodi:role="line"
+         id="tspan1544"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="140.91406"
+         y="25.64942">Q</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="letterW"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="3.7455189"
+       y="26.81386"
+       id="text2322-2"><tspan
+         sodipodi:role="line"
+         id="tspan2320-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="3.7455189"
+         y="26.81386">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="37.612186"
+       y="26.81386"
+       id="text1276"><tspan
+         sodipodi:role="line"
+         id="tspan1274"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="37.612186"
+         y="26.81386">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="71.478859"
+       y="26.81386"
+       id="text1280"><tspan
+         sodipodi:role="line"
+         id="tspan1278"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="71.478859"
+         y="26.81386">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="106.05108"
+       y="27.519415"
+       id="text1284"><tspan
+         sodipodi:role="line"
+         id="tspan1282"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="106.05108"
+         y="27.519415">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="139.21219"
+       y="26.81386"
+       id="text1288"><tspan
+         sodipodi:role="line"
+         id="tspan1286"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="139.21219"
+         y="26.81386">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="173.07887"
+       y="26.81386"
+       id="text1292"><tspan
+         sodipodi:role="line"
+         id="tspan1290"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="173.07887"
+         y="26.81386">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="207.65109"
+       y="27.519415"
+       id="text1296"><tspan
+         sodipodi:role="line"
+         id="tspan1294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="207.65109"
+         y="27.519415">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="240.81219"
+       y="26.81386"
+       id="text1300"><tspan
+         sodipodi:role="line"
+         id="tspan1298"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="240.81219"
+         y="26.81386">W</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="274.67889"
+       y="26.81386"
+       id="text1304"><tspan
+         sodipodi:role="line"
+         id="tspan1302"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="274.67889"
+         y="26.81386">W</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="letterE"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="9.1060839"
+       y="26.81386"
+       id="text2322-9"><tspan
+         sodipodi:role="line"
+         id="tspan2320-67"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="9.1060839"
+         y="26.81386">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="76.839424"
+       y="26.81386"
+       id="text1326"><tspan
+         sodipodi:role="line"
+         id="tspan1324"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="76.839424"
+         y="26.81386">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="42.972752"
+       y="26.81386"
+       id="text1460"><tspan
+         sodipodi:role="line"
+         id="tspan1458"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="42.972752"
+         y="26.81386">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="111.41164"
+       y="27.519415"
+       id="text1464"><tspan
+         sodipodi:role="line"
+         id="tspan1462"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="111.41164"
+         y="27.519415">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="178.43944"
+       y="26.81386"
+       id="text1468"><tspan
+         sodipodi:role="line"
+         id="tspan1466"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="178.43944"
+         y="26.81386">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="144.57275"
+       y="26.81386"
+       id="text1472"><tspan
+         sodipodi:role="line"
+         id="tspan1470"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="144.57275"
+         y="26.81386">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="213.01164"
+       y="27.519415"
+       id="text1494"><tspan
+         sodipodi:role="line"
+         id="tspan1492"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="213.01164"
+         y="27.519415">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="280.03946"
+       y="26.81386"
+       id="text1498"><tspan
+         sodipodi:role="line"
+         id="tspan1496"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="280.03946"
+         y="26.81386">E</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="246.17276"
+       y="26.81386"
+       id="text1502"><tspan
+         sodipodi:role="line"
+         id="tspan1500"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="246.17276"
+         y="26.81386">E</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="letterR"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="7.2595139"
+       y="26.81386"
+       id="text2322-8"><tspan
+         sodipodi:role="line"
+         id="tspan2320-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="7.2595139"
+         y="26.81386">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="41.126183"
+       y="26.81386"
+       id="text1645"><tspan
+         sodipodi:role="line"
+         id="tspan1643"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="41.126183"
+         y="26.81386">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="74.992851"
+       y="26.81386"
+       id="text1703"><tspan
+         sodipodi:role="line"
+         id="tspan1701"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="74.992851"
+         y="26.81386">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="109.56507"
+       y="27.519415"
+       id="text1743"><tspan
+         sodipodi:role="line"
+         id="tspan1741"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="109.56507"
+         y="27.519415">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="142.72618"
+       y="26.81386"
+       id="text1747"><tspan
+         sodipodi:role="line"
+         id="tspan1745"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="142.72618"
+         y="26.81386">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="176.59285"
+       y="26.81386"
+       id="text1751"><tspan
+         sodipodi:role="line"
+         id="tspan1749"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="176.59285"
+         y="26.81386">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="211.16508"
+       y="27.519415"
+       id="text1755"><tspan
+         sodipodi:role="line"
+         id="tspan1753"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="211.16508"
+         y="27.519415">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="244.32619"
+       y="26.81386"
+       id="text1759"><tspan
+         sodipodi:role="line"
+         id="tspan1757"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="244.32619"
+         y="26.81386">R</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:28.2222px;line-height:1.25;font-family:sans-serif;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="278.19287"
+       y="26.81386"
+       id="text1763"><tspan
+         sodipodi:role="line"
+         id="tspan1761"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:28.2222px;font-family:'Yu Gothic UI';-inkscape-font-specification:'Yu Gothic UI';stroke-width:0.264583"
+         x="278.19287"
+         y="26.81386">R</tspan></text>
+  </g>
+</svg>
