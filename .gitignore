@@ -1,1 +1,9 @@
-/Library/
+# Ignore everything
+/*
+/*/
+
+# Inverse ignore 
+!/Assets/
+!/ProjectSettings/
+!/Pachages/
+!.gitignore
