@@ -19,7 +19,8 @@ public class CastleSerialized
     public List<Quaternion> rotations;
     public List<Sprite> sprites;
 
-    public CastleSerialized(int hp, int dam, List<Vector2> pos, List<Quaternion> rot, List<Sprite> sp){
+    public CastleSerialized(int hp, int dam, List<Vector2> pos, List<Quaternion> rot, List<Sprite> sp)
+    {
         health = hp;
         damage = dam;
         positions = pos;
@@ -27,7 +28,8 @@ public class CastleSerialized
         sprites = sp;
     }
 
-    public CastleSerialized(){
+    public CastleSerialized()
+    {
         positions = new List<Vector2>();
         rotations = new List<Quaternion>();
         sprites = new List<Sprite>();
@@ -87,17 +89,20 @@ public class CastleBuilder : MonoBehaviour
 
 
 
-    public void Init(Vector3 position)
+    public void Init(Vector3 position, int line)
     {
         gameManager.globalCastle = Instantiate(castlePrefab, position, Quaternion.identity);
         // print(position);
         gameManager.globalCastle.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        gameManager.globalCastle.GetComponent<Castle>().line = line;
+        gameManager.globalCastle.GetComponent<Castle>().gameManager = gameManager;
 
 
-        for (int i = 0; i < fallingLetters.Length; i++){
+        for (int i = 0; i < fallingLetters.Length; i++)
+        {
             fallingLetters[i] = new List<GameObject>();
         }
-        
+
         PrepareCastle();
         SpawnDDRLetters();
     }
@@ -117,8 +122,10 @@ public class CastleBuilder : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < fallingLetters.Length; i++){
-            if (fallingLetters[i].Count > 0){
+        for (int i = 0; i < fallingLetters.Length; i++)
+        {
+            if (fallingLetters[i].Count > 0)
+            {
                 if (fallingLetters[i].First<GameObject>().transform.position.y - letterReceivers[i].transform.position.y < -FALLING_LETTER_SIZE)
                 {
                     // print("before wind in autolaunching, receiver " + i);
@@ -128,28 +135,32 @@ public class CastleBuilder : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && fallingLetters[0].Count > 0){
+        if (Input.GetKeyDown(KeyCode.Q) && fallingLetters[0].Count > 0)
+        {
             wind = receiver_0.calculateWind(fallingLetters[0].First<GameObject>());
             // print(wind);
             LaunchPreparedBrick(wind, receiver_0.receiverID);
         }
 
 
-        if (Input.GetKeyDown(KeyCode.W) && fallingLetters[1].Count > 0){
+        if (Input.GetKeyDown(KeyCode.W) && fallingLetters[1].Count > 0)
+        {
             wind = receiver_1.calculateWind(fallingLetters[1].First<GameObject>());
             // print(wind);
             LaunchPreparedBrick(wind, receiver_1.receiverID);
         }
 
 
-        if (Input.GetKeyDown(KeyCode.E) && fallingLetters[2].Count > 0){
+        if (Input.GetKeyDown(KeyCode.E) && fallingLetters[2].Count > 0)
+        {
             wind = receiver_2.calculateWind(fallingLetters[2].First<GameObject>());
             // print(wind);
             LaunchPreparedBrick(wind, receiver_2.receiverID);
         }
 
 
-        if (Input.GetKeyDown(KeyCode.R) && fallingLetters[3].Count > 0){
+        if (Input.GetKeyDown(KeyCode.R) && fallingLetters[3].Count > 0)
+        {
             wind = receiver_3.calculateWind(fallingLetters[3].First<GameObject>());
             // print(wind);
             LaunchPreparedBrick(wind, receiver_3.receiverID);
@@ -203,18 +214,20 @@ public class CastleBuilder : MonoBehaviour
         string[] blocks;
         float blockMass = BLOCK_MASS_DEFAULT;
 
-        for ( int i = fLines.Length - 1; i >= 0; i-- ) {
-            
+        for (int i = fLines.Length - 1; i >= 0; i--)
+        {
+
             blocks = fLines[i].Split(";");
 
-            for (int j = blocks.Length - 1; j >= 0; j--){
+            for (int j = blocks.Length - 1; j >= 0; j--)
+            {
                 switch (blocks[j])
                 {
                     case "clay":
                     case "sand":
                     case "canon":
                         bricksToLaunch.Add(new BrickToLaunch(j, fLines.Length - 1 - i, blocks[j], blockMass));
-                        
+
                         break;
 
                     case "-":
@@ -225,6 +238,7 @@ public class CastleBuilder : MonoBehaviour
                 }
             }
 
+            // Bricks on top of the castle are lighter so they don't move bricks underneath them when landing
             blockMass *= BLOCK_MASS_LAYER_MULTIPLIER;
         }
 
@@ -232,7 +246,7 @@ public class CastleBuilder : MonoBehaviour
     }
 
 
-    void SpawnDDRLetters() 
+    void SpawnDDRLetters()
     {
         float spawnHeight = DDRLettersBaseSpawnHeight;
         int receiverNumber;
@@ -264,7 +278,7 @@ public class CastleBuilder : MonoBehaviour
                     letterSpawnPos.x = receiver_3.GetComponent<Transform>().position.x;
                     letterSprite = receiver_3.GetComponent<SpriteRenderer>().sprite;
                     break;
-                
+
                 default:
                     break;
 
@@ -282,20 +296,21 @@ public class CastleBuilder : MonoBehaviour
 
 
 
-    
-   
+
+
     // public CastleSerialized serializeCastle()
     public void serializeCastle()
     {
-        print("serialization");
-        print("total inaccuracy = " + TOTAL_INACCURACY);
+        // print("serialization");
+        // print("total inaccuracy = " + TOTAL_INACCURACY);
         // gllobalCastle.free
         GameObject gCastle = gameManager.globalCastle;
         // CastleSerialized castle = new CastleSerialized();
-        gCastle.GetComponent<Castle>().health = Math.Max(5, CASTLE_MAX_HEALTH - (int)(TOTAL_INACCURACY*10));
-        gCastle.GetComponent<Castle>().damage = Math.Max(5, CASTLE_MAX_DAMAGE - (int)(TOTAL_INACCURACY*10));
+        gCastle.GetComponent<Castle>().health = Math.Max(5, CASTLE_MAX_HEALTH - (int)(TOTAL_INACCURACY * 10));
+        gCastle.GetComponent<Castle>().damage = Math.Max(5, CASTLE_MAX_DAMAGE - (int)(TOTAL_INACCURACY * 10));
+        TOTAL_INACCURACY = 0;
 
-        print("Casrle health = " + gCastle.GetComponent<Castle>().health);
+        // print("Castle health = " + gCastle.GetComponent<Castle>().health);
 
         foreach (var brick in GameObject.FindGameObjectsWithTag("Brick"))
         {
@@ -328,11 +343,11 @@ public class CastleBuilder : MonoBehaviour
         //}
         foreach (GameObject gameObject in SceneManager.GetSceneByName("MainGame").GetRootGameObjects())
         {
-                gameObject.SetActive(true);
-                if (gameObject.name == "MiniGame")
-                {
-                    gameObject.SetActive(false);
-                }
+            gameObject.SetActive(true);
+            if (gameObject.name == "MiniGame")
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         GameObject.Find("GameManager").GetComponent<GameManager>().globalCastle = gCastle;
@@ -350,10 +365,10 @@ public class CastleBuilder : MonoBehaviour
         newBrick.GetComponent<Rigidbody2D>().simulated = false;
         // print("brick pos 1 = " + newBrick.transform.localPosition);
 
-        
+
         // print("brick pos 2 = " + newBrick.transform.localPosition);
 
-        
+
         rb = newBrick.GetComponent<Rigidbody2D>();
         sr = newBrick.GetComponent<SpriteRenderer>();
 
@@ -372,7 +387,8 @@ public class CastleBuilder : MonoBehaviour
                 break;
         }
 
-        if (bricksToLaunch.Count <= 1){
+        if (bricksToLaunch.Count <= 1)
+        {
             print("invoking serialization");
             Invoke("serializeCastle", 3);
         }
@@ -384,7 +400,7 @@ public class CastleBuilder : MonoBehaviour
         rb.simulated = true;
 
         // print("brick pos 3 = " + newBrick.transform.localPosition);
-        
+
     }
 
     Vector2 ComputeInitialSpeed(int gridX, int gridY)
@@ -400,7 +416,7 @@ public class CastleBuilder : MonoBehaviour
 
 
         // float initialVelocityX = x/(2*y) * (INITIAL_VELOCITY_Y - Mathf.Sqrt(INITIAL_VELOCITY_Y*INITIAL_VELOCITY_Y - 2*g*y));
-        float initialVelocityX = x*g / (-INITIAL_VELOCITY_Y - Mathf.Sqrt(INITIAL_VELOCITY_Y*INITIAL_VELOCITY_Y + 2*g*y));
+        float initialVelocityX = x * g / (-INITIAL_VELOCITY_Y - Mathf.Sqrt(INITIAL_VELOCITY_Y * INITIAL_VELOCITY_Y + 2 * g * y));
         // INITIAL_VELOCITY_Y += 0.5f;
         return new Vector2(initialVelocityX, INITIAL_VELOCITY_Y);
     }

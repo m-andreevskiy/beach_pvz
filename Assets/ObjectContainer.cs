@@ -8,6 +8,8 @@ public class ObjectContainer : MonoBehaviour
     public bool isFull;
     public GameManager gameManager;
     public Image backgroundImage;
+    public int line;
+
     private void Start()
     {
         gameManager = GameManager.instance;
@@ -20,7 +22,7 @@ public class ObjectContainer : MonoBehaviour
             backgroundImage.enabled = true;
         }
 
-        
+
     }
     public void OnTriggerExit2D(Collider2D collision)
     {

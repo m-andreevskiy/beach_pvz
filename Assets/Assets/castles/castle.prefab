@@ -44,5 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ab0bfc56d6aec540b78eb1a015da332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  gameManager: {fileID: 0}
+  projectilePrefab: {fileID: 4496097233320214904, guid: 01d22153bc1ffc84d9f95ffc62da1a4b, type: 3}
   health: 0
   damage: 0
+  attackSpeed: 5
+  position: {x: 0, y: 0}
+  line: 0
+  isBuilt: 0

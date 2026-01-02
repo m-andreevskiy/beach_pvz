@@ -24,7 +24,7 @@ public class Example : MonoBehaviour
         {
             Instantiate(GameObject.Find("House"), new Vector3(-1, -1, 0), Quaternion.identity);
 
-            
+
             // 
             if (counter > 0)
             {
@@ -36,11 +36,11 @@ public class Example : MonoBehaviour
                 }
             }
             counter++;
-// 
-            
+            // 
+
 
             buildCastle();
-            
+
 
             //SceneManager loads your new Scene as an extra Scene (overlapping the other). This is Additive mode.
             // SceneManager.LoadScene("CastleBuilding", LoadSceneMode.Additive);
@@ -48,16 +48,17 @@ public class Example : MonoBehaviour
     }
 
 
-    void buildCastle() 
+    void buildCastle()
     {
         foreach (GameObject gameObject in SceneManager.GetSceneByName("Main").GetRootGameObjects())
         {
             // print(gameObject.name);
-            if (gameObject.name != "House"){
+            if (gameObject.name != "House")
+            {
                 gameObject.SetActive(false);
             }
-            
-            
+
+
         }
         foreach (GameObject gameObject in SceneManager.GetSceneByName("CastleBuilding").GetRootGameObjects())
         {
@@ -66,7 +67,7 @@ public class Example : MonoBehaviour
 
 
 
-        
-        GameObject.Find("castle").GetComponent<CastleBuilder>().Init(new Vector2());
+
+        // GameObject.Find("castle").GetComponent<CastleBuilder>().Init(new Vector2());
     }
 }
