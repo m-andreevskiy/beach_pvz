@@ -164,4 +164,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card: {fileID: 0}
   castleType: 2
-  prefab: {fileID: 8576536202150631457, guid: 47a1643a85b1761418963e2ca83dca3e, type: 3}
+  prefab: {fileID: 4992329387706511444, guid: 156c09334ad7a2248b9cee0f2a066360, type: 3}
