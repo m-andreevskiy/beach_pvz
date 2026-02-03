@@ -11,6 +11,11 @@ public class ProjectileBase : MonoBehaviour
     Transform tr;
     private Health hitHealth = null;
 
+    public void SetDamage(int d)
+    {
+        damage = d;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,13 +27,14 @@ public class ProjectileBase : MonoBehaviour
     void Update()
     {
         tr.position += new Vector3(Time.deltaTime * VELOCITY, 0, 0);
+        if (tr.position.x > 20)
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        print("colliding with " + collision.gameObject.name);
-        // print("is this an enemy? - " + collision.CompareTag("Enemy"));
-
         if (collision.CompareTag("Enemy")) {
             hitHealth = collision.GetComponent<Health>();
             if (hitHealth != null) {
@@ -41,9 +47,5 @@ public class ProjectileBase : MonoBehaviour
         }
 
     }
-    // public void OnTriggerExit2D(Collider2D collision)
-    // {
-        // print("trigger exiting");
-    // }
 
 }

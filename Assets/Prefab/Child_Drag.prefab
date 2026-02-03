@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 3350903410698215449}
   - component: {fileID: 9156322553296306323}
   - component: {fileID: 4986088633454388543}
-  - component: {fileID: -4713705440703418997}
+  - component: {fileID: -5617019377416863956}
   m_Layer: 5
-  m_Name: Object_Drag
+  m_Name: Child_Drag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4dd848b72ac08174fae327430f58673a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1662f14eed273540a7b638234e88f1c, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -150,7 +150,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &-4713705440703418997
+--- !u!114 &-5617019377416863956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -163,5 +163,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   card: {fileID: 0}
-  castleType: 1
-  prefab: {fileID: 8576536202150631457, guid: 20898a4195b3d464892d0c03f8a55a7a, type: 3}
+  castleType: 80
+  prefab: {fileID: 8576536202150631457, guid: e955bd2c7cd436d4c942e20204c9d5c0, type: 3}

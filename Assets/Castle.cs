@@ -1,38 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class Castle : MonoBehaviour
+
+[RequireComponent(typeof(Health))]
+public class Castle : CastleBase
 {
 
     public LayerMask enemyMask;
-    public GameManager gameManager;
     public GameObject projectilePrefab;
     public float health;
-    public float damage;
+    [SerializeField] private int maxHealth = 100;
+    public int damage;
+    public int maxDamage = 100;
     public float attackSpeed = 10;
     public Vector2 position;
-    public int line;
-    public bool isBuilt = false;
 
+    [SerializeField] private GameObject tooltipObject;
+    private CastleTooltip tooltip;
     private float attackTimer = 0;
     private float baseAttackTime = 10;
 
 
     // Start is called before the first frame update
-    void Start()
+    override protected void Start()
     {
+        base.Start();
+
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        tooltipObject.SetActive(false);
+
+    }
+
+    override public void Init()
+    {
+        int finalHealth = Math.Max(5, maxHealth - (int)(TOTAL_BUILDING_INACCURACY * 10));
+        health = finalHealth;
+        damage = Math.Max(5, maxDamage - (int)(TOTAL_BUILDING_INACCURACY * 10));
+        healthScript.Init(finalHealth, finalHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!isBuilt)
+        {
+            return;
+        }
+
         attackTimer += Time.deltaTime;
 
         if (gameManager != null)
         {
-            if (isBuilt && attackTimer >= baseAttackTime / attackSpeed)
+            if (attackSpeed != 0 && isBuilt && attackTimer >= baseAttackTime / attackSpeed)
             {
                 RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, 1000, enemyMask);
                 if (hit)
@@ -48,10 +67,30 @@ public class Castle : MonoBehaviour
         }
     }
 
+    override public string GetTooltipInfo()
+    {
+        string res;
+        res = "Health " + healthScript.getHealth() + " / " + healthScript.getMaxHealth();
+        res += "\nDamage " + damage + " / " + maxDamage;
+
+        return res;
+
+    }
+
     private void Shoot()
     {
-        // print("shooting on line " + line);
-        Instantiate(projectilePrefab, this.transform);
+        GameObject projectile = Instantiate(projectilePrefab, this.transform);
+        projectile.GetComponent<ProjectileBase>().SetDamage(damage);
+    }
 
+
+    void OnMouseEnter()
+    {
+        tooltipObject.SetActive(true);
+    }
+
+    void OnMouseExit()
+    {
+        tooltipObject.SetActive(false);
     }
 }

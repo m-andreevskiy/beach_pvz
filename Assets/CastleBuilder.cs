@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 // using System.Numerics;
 using Unity.Collections;
+using Unity.VisualScripting;
 using UnityEditor;
 // using UnityEditor.Callbacks;
 using UnityEngine;
@@ -79,8 +80,6 @@ public class CastleBuilder : MonoBehaviour
     float BLOCK_MASS_LAYER_MULTIPLIER = 0.1f;
     // public float brickPresicion = 0.15f;
     float TOTAL_INACCURACY = 0;
-    int CASTLE_MAX_HEALTH = 100;
-    int CASTLE_MAX_DAMAGE = 100;
 
     UnityEngine.Vector2 wind = new UnityEngine.Vector2(0, 0);
     // Vector2 WIND_ON_AUTO_LAUNCH = new Vector2(5, 5);
@@ -89,13 +88,13 @@ public class CastleBuilder : MonoBehaviour
 
 
 
-    public void Init(Vector3 position, int line)
+    public void Init(Vector3 position, int line, ObjectDrag objectDrag, ObjectContainer container)
     {
-        gameManager.globalCastle = Instantiate(castlePrefab, position, Quaternion.identity);
-        // print(position);
+        gameManager.globalCastle = Instantiate(objectDrag.GetPrefab(), position, Quaternion.identity);
         gameManager.globalCastle.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        gameManager.globalCastle.GetComponent<Castle>().line = line;
-        gameManager.globalCastle.GetComponent<Castle>().gameManager = gameManager;
+        gameManager.globalCastle.GetComponent<CastleBase>().line = line;
+        gameManager.globalCastle.GetComponent<CastleBase>().gameManager = gameManager;
+        gameManager.globalCastle.GetComponent<CastleBase>().assignedContainer = container;
 
 
         for (int i = 0; i < fallingLetters.Length; i++)
@@ -103,7 +102,7 @@ public class CastleBuilder : MonoBehaviour
             fallingLetters[i] = new List<GameObject>();
         }
 
-        PrepareCastle();
+        PrepareCastle(objectDrag.GetBuildingConfigFile());
         SpawnDDRLetters();
     }
 
@@ -205,9 +204,19 @@ public class CastleBuilder : MonoBehaviour
 
 
 
-    void PrepareCastle()
+    void PrepareCastle(string buildConfigFile)
     {
-        TextAsset castleFile = Resources.Load("CastleConfigs/castle_1") as TextAsset;
+        TextAsset castleFile;
+        if (buildConfigFile != null)
+        {
+            castleFile = Resources.Load(buildConfigFile) as TextAsset;
+        }
+        else
+        {
+            Debug.Log("building default castle -.-");
+            castleFile = Resources.Load("CastleConfigs/castle_1") as TextAsset;
+        }
+
 
         string castleText = castleFile.text;
         string[] fLines = castleText.Split("\r\n");
@@ -252,7 +261,7 @@ public class CastleBuilder : MonoBehaviour
         int receiverNumber;
         Sprite letterSprite = receiver_0.GetComponent<SpriteRenderer>().sprite;
 
-        Vector3 letterSpawnPos = new Vector3(0, 0, 0);
+        Vector3 letterSpawnPos = new Vector3(0, 0, -1);
         for (int i = 0; i < bricksToLaunch.Count; i++)
         {
             receiverNumber = UnityEngine.Random.Range(0, 4);
@@ -298,19 +307,14 @@ public class CastleBuilder : MonoBehaviour
 
 
 
-    // public CastleSerialized serializeCastle()
     public void serializeCastle()
     {
-        // print("serialization");
-        // print("total inaccuracy = " + TOTAL_INACCURACY);
-        // gllobalCastle.free
         GameObject gCastle = gameManager.globalCastle;
-        // CastleSerialized castle = new CastleSerialized();
-        gCastle.GetComponent<Castle>().health = Math.Max(5, CASTLE_MAX_HEALTH - (int)(TOTAL_INACCURACY * 10));
-        gCastle.GetComponent<Castle>().damage = Math.Max(5, CASTLE_MAX_DAMAGE - (int)(TOTAL_INACCURACY * 10));
+        gCastle.GetComponent<CastleBase>().TOTAL_BUILDING_INACCURACY = TOTAL_INACCURACY;
+        gCastle.GetComponent<CastleBase>().Init();
+
         TOTAL_INACCURACY = 0;
 
-        // print("Castle health = " + gCastle.GetComponent<Castle>().health);
 
         foreach (var brick in GameObject.FindGameObjectsWithTag("Brick"))
         {
@@ -350,6 +354,7 @@ public class CastleBuilder : MonoBehaviour
             }
         }
 
+        gCastle.GetComponent<BoxCollider2D>().enabled = true;
         GameObject.Find("GameManager").GetComponent<GameManager>().globalCastle = gCastle;
         GameObject.Find("GameManager").GetComponent<GameManager>().PlaceObjectContinue();
 
@@ -389,7 +394,7 @@ public class CastleBuilder : MonoBehaviour
 
         if (bricksToLaunch.Count <= 1)
         {
-            print("invoking serialization");
+            // print("invoking serialization");
             Invoke("serializeCastle", 3);
         }
 

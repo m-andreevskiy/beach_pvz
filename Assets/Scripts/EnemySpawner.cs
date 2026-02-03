@@ -4,14 +4,22 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-  public GameManager gameManager;
-  public GameObject enemyPrefab;
-  public float spawnRate = 2;
+  [SerializeField] private int enemiesFinalNumber = 6;
+  [SerializeField] private GameManager gameManager;
+  [SerializeField] private GameObject enemyPrefab;
+  [SerializeField] private float spawnRate = 2;
 
   private float BASE_SPAWN_TIME = 10;
-
   private float spawnTimer = 0;
   private int line;
+  private int enemiesSpawnedCount = 0;
+
+
+  public void Restart()
+  {
+    enemiesSpawnedCount = 0;
+    spawnTimer = 0;
+  }
 
   private void Start()
   {
@@ -21,6 +29,11 @@ public class EnemySpawner : MonoBehaviour
 
   private void FixedUpdate()
   {
+    if (enemiesSpawnedCount >= enemiesFinalNumber)
+    {
+      return;
+    }
+
     spawnTimer += Time.deltaTime;
 
     if (spawnTimer >= BASE_SPAWN_TIME / spawnRate)
@@ -28,8 +41,14 @@ public class EnemySpawner : MonoBehaviour
       spawnTimer = 0;
       GameObject newEnemy = Instantiate(enemyPrefab, this.transform);
       line = Random.Range(0, 3);
-      // print("spawning enemy on line " + line);
+      // line = 0;
       gameManager.SpawnEnemy(newEnemy, line);
+
+      enemiesSpawnedCount++;
+      if (enemiesSpawnedCount >= enemiesFinalNumber)
+      {
+        gameManager.allEnemiesSpawned = true;
+      }
     }
 
   }

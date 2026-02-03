@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -7,12 +8,14 @@ public class Health : MonoBehaviour
 
   [SerializeField] private int maxHealth;
   [SerializeField] private int health;
+  [SerializeField] private Animator animator;
+
   // [SerializeField] private GameObject healthBar;
 
-
-  public void init()
+  public void Init(int maxH, int h)
   {
-
+    maxHealth = maxH;
+    health = h;
   }
 
   private void updateHealthBar()
@@ -24,6 +27,7 @@ public class Health : MonoBehaviour
   {
     health = maxHealth;
     // updateHealthBar();
+    
   }
 
 
@@ -47,13 +51,24 @@ public class Health : MonoBehaviour
 
   private void Die()
   {
-    Debug.Log("Someone's dead");
-    Destroy(gameObject);
+    // Debug.Log("Someone's dead");
+    if (animator != null)
+    {
+      animator.SetTrigger("die");
+    }
+    else
+    {
+      Destroy(gameObject);
+    }
   }
 
   public int getHealth()
   {
     return health;
+  }
+  public int getMaxHealth()
+  {
+    return maxHealth;
   }
 
   public void setHealth(int desiredHealth)
