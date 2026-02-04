@@ -11,8 +11,6 @@ public class Castle_wall : CastleBase
     [SerializeField] private int maxHealth = 300;
     public Vector2 position;
 
-    [SerializeField] private GameObject tooltipObject;
-    private CastleTooltip tooltip;
 
     // Start is called before the first frame update
     override protected void Start()
@@ -46,13 +44,4 @@ public class Castle_wall : CastleBase
 
     }
 
-    void OnMouseEnter()
-    {
-        // tooltipObject.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        // tooltipObject.SetActive(false);
-    }
 }

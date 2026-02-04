@@ -15,8 +15,6 @@ public class Castle : CastleBase
     public float attackSpeed = 10;
     public Vector2 position;
 
-    [SerializeField] private GameObject tooltipObject;
-    private CastleTooltip tooltip;
     private float attackTimer = 0;
     private float baseAttackTime = 10;
 
@@ -27,7 +25,6 @@ public class Castle : CastleBase
         base.Start();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        // tooltipObject.SetActive(false);
 
     }
 
@@ -84,13 +81,4 @@ public class Castle : CastleBase
     }
 
 
-    void OnMouseEnter()
-    {
-        // tooltipObject.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        // tooltipObject.SetActive(false);
-    }
 }

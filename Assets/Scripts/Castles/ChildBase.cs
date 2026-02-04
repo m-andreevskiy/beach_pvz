@@ -14,8 +14,6 @@ public class ChildBase : CastleBase
     // [SerializeField] private GameManager gameManager;
     public Vector2 position;
 
-    [SerializeField] private GameObject tooltipObject;
-    private CastleTooltip tooltip;
 
     [SerializeField] private float generationRate = 2;
 
@@ -27,7 +25,6 @@ public class ChildBase : CastleBase
     override protected void Start()
     {
         base.Start();
-        // tooltipObject.SetActive(false);
         healthScript.Init(maxHealth, maxHealth);
 
     }
@@ -58,13 +55,4 @@ public class ChildBase : CastleBase
 
     }
 
-    void OnMouseEnter()
-    {
-        // tooltipObject.SetActive(true);
-    }
-
-    void OnMouseExit()
-    {
-        // tooltipObject.SetActive(false);
-    }
 }

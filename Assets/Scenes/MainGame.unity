@@ -4866,7 +4866,7 @@ GameObject:
   - component: {fileID: 975379322}
   - component: {fileID: 975379321}
   - component: {fileID: 975379323}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PearlSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}

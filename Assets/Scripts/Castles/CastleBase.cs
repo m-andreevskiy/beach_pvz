@@ -11,6 +11,7 @@ public class CastleBase : MonoBehaviour
     public bool isBuilt = false;
     public virtual bool isChild { get;} = false;
     public ObjectContainer assignedContainer;
+    [SerializeField] private GameObject tooltipObject;
     [SerializeField] protected int costInSand;
     [SerializeField] protected int costInClay;
     [SerializeField] protected int costInPearls;
@@ -20,6 +21,7 @@ public class CastleBase : MonoBehaviour
     protected virtual void Start()
     {
         healthScript = GetComponent<Health>();
+        tooltipObject.SetActive(false);
     }
 
     public virtual void Init()
@@ -55,4 +57,16 @@ public class CastleBase : MonoBehaviour
     {
         assignedContainer.isFull = false;
     }
+
+
+    void OnMouseEnter()
+    {
+        tooltipObject.SetActive(true);
+    }
+
+    void OnMouseExit()
+    {
+        tooltipObject.SetActive(false);
+    }
+
 }
