@@ -7,7 +7,7 @@ using UnityEngine;
 public class ChildBase : CastleBase
 {
 
-    public override bool isChild { get; set;} = true;
+    public override bool isChild { get;} = true;
     public float health;
     public string resourceName;
     [SerializeField] private int maxHealth = 100;
@@ -27,7 +27,7 @@ public class ChildBase : CastleBase
     override protected void Start()
     {
         base.Start();
-        tooltipObject.SetActive(false);
+        // tooltipObject.SetActive(false);
         healthScript.Init(maxHealth, maxHealth);
 
     }
@@ -60,11 +60,11 @@ public class ChildBase : CastleBase
 
     void OnMouseEnter()
     {
-        tooltipObject.SetActive(true);
+        // tooltipObject.SetActive(true);
     }
 
     void OnMouseExit()
     {
-        tooltipObject.SetActive(false);
+        // tooltipObject.SetActive(false);
     }
 }

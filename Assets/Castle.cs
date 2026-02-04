@@ -27,7 +27,7 @@ public class Castle : CastleBase
         base.Start();
 
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        tooltipObject.SetActive(false);
+        // tooltipObject.SetActive(false);
 
     }
 
@@ -86,11 +86,11 @@ public class Castle : CastleBase
 
     void OnMouseEnter()
     {
-        tooltipObject.SetActive(true);
+        // tooltipObject.SetActive(true);
     }
 
     void OnMouseExit()
     {
-        tooltipObject.SetActive(false);
+        // tooltipObject.SetActive(false);
     }
 }

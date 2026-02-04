@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
 
             if (objectDrag.GetPrefab().GetComponent<CastleBase>().isChild)
             {
-                Debug.Log("this is child");
+                // Debug.Log("this is child");
                 globalCastle = Instantiate(objectDrag.GetPrefab(), position, UnityEngine.Quaternion.identity);
                 globalCastle.GetComponent<ChildBase>().gameManager = this;
                 globalCastle.GetComponent<CastleBase>().assignedContainer = newCastleContainer;

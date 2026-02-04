@@ -9,7 +9,7 @@ public class CastleBase : MonoBehaviour
     public int line;
     public float TOTAL_BUILDING_INACCURACY;
     public bool isBuilt = false;
-    public virtual bool isChild { get; set;} = false;
+    public virtual bool isChild { get;} = false;
     public ObjectContainer assignedContainer;
     [SerializeField] protected int costInSand;
     [SerializeField] protected int costInClay;

@@ -18,7 +18,7 @@ public class Castle_wall : CastleBase
     override protected void Start()
     {
         base.Start();
-        tooltipObject.SetActive(false);
+        // tooltipObject.SetActive(false);
 
     }
 
@@ -48,11 +48,11 @@ public class Castle_wall : CastleBase
 
     void OnMouseEnter()
     {
-        tooltipObject.SetActive(true);
+        // tooltipObject.SetActive(true);
     }
 
     void OnMouseExit()
     {
-        tooltipObject.SetActive(false);
+        // tooltipObject.SetActive(false);
     }
 }
