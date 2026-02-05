@@ -378,7 +378,7 @@ GameObject:
   - component: {fileID: 7735143572514007594}
   - component: {fileID: 160246219744065824}
   - component: {fileID: 1221757591681242407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: castle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -433,6 +433,7 @@ MonoBehaviour:
   TOTAL_BUILDING_INACCURACY: 0
   isBuilt: 0
   assignedContainer: {fileID: 0}
+  tooltipObject: {fileID: 3868838219706060054}
   costInSand: 12
   costInClay: 8
   costInPearls: 2
@@ -446,7 +447,6 @@ MonoBehaviour:
   maxDamage: 100
   attackSpeed: 5
   position: {x: 0, y: 0}
-  tooltipObject: {fileID: 3868838219706060054}
 --- !u!61 &1221757591681242407
 BoxCollider2D:
   m_ObjectHideFlags: 0
