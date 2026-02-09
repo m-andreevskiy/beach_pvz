@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     List<GameObject> castles = new List<GameObject>();
     private int sandAmount = 100;
     private int clayAmount= 100;
-    private int pearlsAmount = 0;
+    private int pearlsAmount = 10;
 
     private void Awake()
     {

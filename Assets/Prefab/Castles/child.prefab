@@ -364,7 +364,7 @@ SpriteRenderer:
   m_Size: {x: 2.56, y: 2.56}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &4244030503504698637
@@ -406,7 +406,8 @@ MonoBehaviour:
   health: 0
   resourceName: sand
   maxHealth: 100
-  position: {x: 0, y: 0}
+  sandFadeAwayPrefab: {fileID: 6407309849913814717, guid: 235c020a594267f4bbf211abd6ec09a1, type: 3}
+  clayFadeAwayPrefab: {fileID: 6407309849913814717, guid: 62bf82e738d509644ac7249e90181bdc, type: 3}
   generationRate: 2
 --- !u!61 &2240317948005173914
 BoxCollider2D:

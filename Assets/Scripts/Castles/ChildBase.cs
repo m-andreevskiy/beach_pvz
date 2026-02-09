@@ -12,14 +12,16 @@ public class ChildBase : CastleBase
     public string resourceName;
     [SerializeField] private int maxHealth = 100;
     // [SerializeField] private GameManager gameManager;
-    public Vector2 position;
+    // public Vector2 position;
 
 
+    [SerializeField] private GameObject sandFadeAwayPrefab;
+    [SerializeField] private GameObject clayFadeAwayPrefab;
     [SerializeField] private float generationRate = 2;
 
     private float BASE_GENERATION_TIME = 10;
     private float generationTimer = 0;
-
+ 
 
     // Start is called before the first frame update
     override protected void Start()
@@ -41,6 +43,20 @@ public class ChildBase : CastleBase
             generationTimer = 0;
 
             gameManager.AddResource(resourceName, 1);
+
+            switch (resourceName)
+            {
+                case "sand":
+                    Instantiate(sandFadeAwayPrefab, transform);
+                    break;
+
+                case "clay":
+                    Instantiate(clayFadeAwayPrefab, transform);
+                    break;
+
+                default:
+                    break;
+            }
         }
 
     }
