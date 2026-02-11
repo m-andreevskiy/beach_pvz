@@ -24,8 +24,6 @@ public class ChildTooltip : MonoBehaviour
 
     public void SetResource(string resourceName)
     {
-		Debug.Log("resource name: " + resourceName);
-
         switch (resourceName)
         {
             case "sand":
