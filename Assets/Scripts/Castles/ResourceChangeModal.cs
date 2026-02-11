@@ -22,27 +22,26 @@ public class ResourceChangeModal : MonoBehaviour
     void Update()
     {
 
-
-        if (Input.GetKeyUp(KeyCode.Mouse0))
-        {
-			if (isFirstFrame)
+			if (Input.GetKeyUp(KeyCode.Mouse0))
 			{
-				isFirstFrame = false;
-				return;
-			}
-		
-			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+				if (isFirstFrame)
+				{
+					isFirstFrame = false;
+					return;
+				}
+			
+				Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-			if (collider.OverlapPoint(mousePosition))
-			{
-				// Debug.Log("click inside");
-			}
-			else
-			{
-				this.gameObject.SetActive(false);
-			}
+				if (collider.OverlapPoint(mousePosition))
+				{
+					// Debug.Log("click inside");
+				}
+				else
+				{
+					this.gameObject.SetActive(false);
+				}
 
-        }
+			}
 
     }
 }

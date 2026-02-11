@@ -7,6 +7,8 @@ public class ResourceOption : MonoBehaviour
     [SerializeField] private GameObject resourceModal;
     [SerializeField] private GameObject highlight;
     [SerializeField] private GameObject highlightChosen;
+    [SerializeField] private ChildBase childScript;
+    [SerializeField] private string resourceName;
 
 
     void OnMouseEnter()
@@ -25,6 +27,8 @@ public class ResourceOption : MonoBehaviour
         highlightChosen.SetActive(true);
         highlightChosen.transform.position = transform.position;
         resourceModal.SetActive(false);
+
+        childScript.SetResourceProduction(resourceName);
     }
 
 }

@@ -11,7 +11,7 @@ public class ChildBase : CastleBase
     public float health;
     public string resourceName;
     [SerializeField] private int maxHealth = 100;
-    [SerializeField] private GameObject childTooltip;
+    [SerializeField] private ChildTooltip childTooltip;
     [SerializeField] private GameObject resourceModal;
 
     [SerializeField] private GameObject sandFadeAwayPrefab;
@@ -79,19 +79,27 @@ public class ChildBase : CastleBase
         }
         
         base.OnMouseEnter();
-        childTooltip.SetActive(true);
+        childTooltip.gameObject.SetActive(true);
     }
 
     override protected void OnMouseExit()
     {
         base.OnMouseExit();
-        childTooltip.SetActive(false);
+        childTooltip.gameObject.SetActive(false);
     }
 
     void OnMouseUp()
     {
         OnMouseExit();
         resourceModal.SetActive(true);
+    }
+
+
+    public void SetResourceProduction(string resName)
+    {
+        resourceName = resName;
+
+        childTooltip.SetResource(resName);
     }
 
 }

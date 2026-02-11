@@ -150,6 +150,8 @@ MonoBehaviour:
   resourceModal: {fileID: 1388579766785688730}
   highlight: {fileID: 312986767529949226}
   highlightChosen: {fileID: 7503502705963875396}
+  childScript: {fileID: -7306833359882452699}
+  resourceName: sand
 --- !u!1 &312986767529949226
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +684,8 @@ MonoBehaviour:
   resourceModal: {fileID: 1388579766785688730}
   highlight: {fileID: 885502066538377125}
   highlightChosen: {fileID: 7503502705963875396}
+  childScript: {fileID: -7306833359882452699}
+  resourceName: clay
 --- !u!1 &3415183900026297280
 GameObject:
   m_ObjectHideFlags: 0
@@ -1412,7 +1416,7 @@ MonoBehaviour:
   health: 0
   resourceName: sand
   maxHealth: 100
-  childTooltip: {fileID: 7181043636292429089}
+  childTooltip: {fileID: 5683150811343947453}
   resourceModal: {fileID: 1388579766785688730}
   sandFadeAwayPrefab: {fileID: 6407309849913814717, guid: 235c020a594267f4bbf211abd6ec09a1, type: 3}
   clayFadeAwayPrefab: {fileID: 6407309849913814717, guid: 62bf82e738d509644ac7249e90181bdc, type: 3}
@@ -1580,6 +1584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8290724050280825449}
+  - component: {fileID: 5683150811343947453}
   m_Layer: 7
   m_Name: Resource tooltip
   m_TagString: Untagged
@@ -1604,6 +1609,21 @@ Transform:
   - {fileID: 1321403175019902802}
   m_Father: {fileID: 2543245301835128234}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5683150811343947453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7181043636292429089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42feac2d56c56d24991252fd4ad38d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5168760962614583099}
+  sandSprite: {fileID: 21300000, guid: 47451e0352259864da039675ef6c4197, type: 3}
+  claySprite: {fileID: 21300000, guid: c08aefaf51a6cf34796dbb726bda2cec, type: 3}
 --- !u!1 &7503502705963875396
 GameObject:
   m_ObjectHideFlags: 0
