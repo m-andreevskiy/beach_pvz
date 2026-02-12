@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text sandAmountText;
     [SerializeField] private TMP_Text clayAmountText;
     [SerializeField] private TMP_Text pearlsAmountText;
+    [SerializeField] private ResourceStorage resourceStorage;
 
     public GameObject draggingObject;
     public GameObject currentContainer;
@@ -24,7 +25,6 @@ public class GameManager : MonoBehaviour
     public bool gameGoesOn = true;
     public bool allEnemiesSpawned = false;
 
-    // public CastleSerialized globalCastle = new CastleSerialized();
     public GameObject globalCastle = null;
     public List<GameObject>[] enemies = new List<GameObject>[3];
     public GameObject testEnemy;
@@ -116,16 +116,19 @@ public class GameManager : MonoBehaviour
 
             if (sandCost > sandAmount)
             {
+                resourceStorage.LackHighlight();
                 print("not enough sand >.<");
                 return;
             }
             if (clayCost > clayAmount)
             {
+                resourceStorage.LackHighlight();
                 print("not enough clay >.<");
                 return;
             }
             if (pearlsCost > pearlsAmount)
             {
+                resourceStorage.LackHighlight();
                 print("not enough pearls >.<");
                 return;
             }
