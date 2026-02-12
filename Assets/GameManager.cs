@@ -145,7 +145,7 @@ public class GameManager : MonoBehaviour
             UnityEngine.Vector3 position = currentContainer.transform.position;
 
             position = mainCamera.ScreenToWorldPoint(position);
-            position.z = 1; // a bit farther from camera to let enemies be over castles
+            position.z = spawnLines[newCastleLine - 1].transform.position.z;
 
 
             if (objectDrag.GetPrefab().GetComponent<CastleBase>().isChild)
