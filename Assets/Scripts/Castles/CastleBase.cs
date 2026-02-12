@@ -59,12 +59,12 @@ public class CastleBase : MonoBehaviour
     }
 
 
-    void OnMouseEnter()
+    virtual protected void OnMouseEnter()
     {
         tooltipObject.SetActive(true);
     }
 
-    void OnMouseExit()
+    virtual protected void OnMouseExit()
     {
         tooltipObject.SetActive(false);
     }
