@@ -400,7 +400,7 @@ public class CastleBuilder : MonoBehaviour
 
         audioManager.PlayBrickLaunchSound();
         yield return new WaitForSeconds(0.2f);
-        rb.velocity = ComputeInitialSpeed(brick.gridX, brick.gridY) + wind;
+        rb.linearVelocity = ComputeInitialSpeed(brick.gridX, brick.gridY) + wind;
         rb.mass = brick.mass;
         rb.simulated = true;
 
