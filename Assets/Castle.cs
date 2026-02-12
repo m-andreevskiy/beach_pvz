@@ -78,6 +78,7 @@ public class Castle : CastleBase
     {
         GameObject projectile = Instantiate(projectilePrefab, this.transform);
         projectile.GetComponent<ProjectileBase>().SetDamage(damage);
+        projectile.transform.position = this.transform.position + new Vector3(0, 0, -1);
     }
 
 
