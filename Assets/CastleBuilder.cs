@@ -71,8 +71,8 @@ public class CastleBuilder : MonoBehaviour
     // public Vector3 BlockLaunchingPosition = new Vector3(-5, 0, -1);
     public Vector3 BlockLaunchingPosition = new Vector3(-7, -1.3f, -1);
 
-    // float INITIAL_VELOCITY_Y = 11;
-    float INITIAL_VELOCITY_Y = 9;
+    [SerializeField] private float INITIAL_VELOCITY_Y = 11;
+    // [SerializeField] private float INITIAL_VELOCITY_Y = 9;
     float BLOCK_SIZE = 0.64f;
     float FALLING_LETTER_SIZE = 1.28f;
     float BLOCK_MASS_DEFAULT = 1000;
@@ -400,7 +400,7 @@ public class CastleBuilder : MonoBehaviour
 
         audioManager.PlayBrickLaunchSound();
         yield return new WaitForSeconds(0.2f);
-        rb.linearVelocity = ComputeInitialSpeed(brick.gridX, brick.gridY) + wind;
+        rb.linearVelocity = ComputeInitialSpeed(brick.gridX, brick.gridY, rb.gravityScale) + wind;
         rb.mass = brick.mass;
         rb.simulated = true;
 
@@ -408,7 +408,7 @@ public class CastleBuilder : MonoBehaviour
 
     }
 
-    Vector2 ComputeInitialSpeed(int gridX, int gridY)
+    Vector2 ComputeInitialSpeed(int gridX, int gridY, float gravityScale)
     {
         float offsetX = BLOCK_SIZE * 6;
 
@@ -417,7 +417,7 @@ public class CastleBuilder : MonoBehaviour
         float y = gridY * BLOCK_SIZE;
         // float y = destination.y - BlockLaunchingPosition.y;
 
-        float g = Physics2D.gravity.y;
+        float g = Physics2D.gravity.y * gravityScale;
 
 
         // float initialVelocityX = x/(2*y) * (INITIAL_VELOCITY_Y - Mathf.Sqrt(INITIAL_VELOCITY_Y*INITIAL_VELOCITY_Y - 2*g*y));

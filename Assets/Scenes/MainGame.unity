@@ -1740,6 +1740,7 @@ MonoBehaviour:
   DDRLettersSpawnHeightOffset: 3
   DDRLettersBaseSpawnHeight: 10
   BlockLaunchingPosition: {x: -7.6, y: -0.4, z: -1}
+  INITIAL_VELOCITY_Y: 19
 --- !u!1 &204093818
 GameObject:
   m_ObjectHideFlags: 0
