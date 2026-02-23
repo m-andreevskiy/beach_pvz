@@ -31,9 +31,9 @@ public class GameManager : MonoBehaviour
     public Camera mainCamera;
     public static GameManager instance;
     List<GameObject> castles = new List<GameObject>();
-    private int sandAmount = 100;
-    private int clayAmount= 100;
-    private int pearlsAmount = 10;
+    [SerializeField] private int sandAmount = 100;
+    [SerializeField] private int clayAmount= 100;
+    [SerializeField] private int pearlsAmount = 100;
 
     private void Awake()
     {
@@ -107,7 +107,15 @@ public class GameManager : MonoBehaviour
 
     public void PlaceObject(ObjectDrag objectDrag)
     {
-        if (draggingObject != null && currentContainer != null)
+        if (!currentContainer)
+        {
+            return;
+        }
+        // Debug.Log("currentContainer = " + currentContainer);
+
+        ObjectContainer containerScript = currentContainer.GetComponent<ObjectContainer>();
+
+        if (draggingObject != null && currentContainer != null && !containerScript.isFull && containerScript.backgroundImage.enabled)
         {
             CastleBase newCastleBase = objectDrag.GetPrefab().GetComponent<CastleBase>();
             int sandCost = newCastleBase.getCostInSand();
@@ -138,13 +146,12 @@ public class GameManager : MonoBehaviour
             pearlsAmount -= pearlsCost;
             
 
-            ObjectContainer newCastleContainer = currentContainer.GetComponent<ObjectContainer>();
-            currentContainer.GetComponent<ObjectContainer>().isFull = true;
-            newCastleLine = currentContainer.GetComponent<ObjectContainer>().line;
+            containerScript.isFull = true;
+            newCastleLine = containerScript.line;
 
             UnityEngine.Vector3 position = currentContainer.transform.position;
 
-            position = mainCamera.ScreenToWorldPoint(position);
+            // position = mainCamera.ScreenToWorldPoint(position);
             position.z = spawnLines[newCastleLine - 1].transform.position.z;
 
 
@@ -153,7 +160,7 @@ public class GameManager : MonoBehaviour
                 // Debug.Log("this is child");
                 globalCastle = Instantiate(objectDrag.GetPrefab(), position, UnityEngine.Quaternion.identity);
                 globalCastle.GetComponent<ChildBase>().gameManager = this;
-                globalCastle.GetComponent<CastleBase>().assignedContainer = newCastleContainer;
+                globalCastle.GetComponent<CastleBase>().assignedContainer = containerScript;
                 PlaceObjectContinue();
                 return;
             }
@@ -172,7 +179,7 @@ public class GameManager : MonoBehaviour
                 }
             }
 
-            GameObject.Find("castleBuilder").GetComponent<CastleBuilder>().Init(position, newCastleLine, objectDrag, newCastleContainer);
+            GameObject.Find("castleBuilder").GetComponent<CastleBuilder>().Init(position, newCastleLine, objectDrag, containerScript);
 
         }
     }

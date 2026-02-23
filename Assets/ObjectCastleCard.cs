@@ -31,7 +31,8 @@ public class ObjectCastleCard : MonoBehaviour, IDragHandler, IPointerDownHandler
     {
         if (!gameManager.IsGamePaused())
         {
-            object_Drag_Instance.transform.position = Input.mousePosition;
+            // object_Drag_Instance.transform.position = Input.mousePosition;
+            object_Drag_Instance.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 1);
         }
         else
         {
@@ -42,10 +43,13 @@ public class ObjectCastleCard : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        object_Drag_Instance = Instantiate(object_Drag.gameObject, canvas.transform);
-        object_Drag_Instance.transform.position = Input.mousePosition;
-        // object_Drag_Instance.GetComponent<ObjectDrag>().card = this;
+        // object_Drag_Instance = Instantiate(object_Drag.gameObject, canvas.transform);
+        object_Drag_Instance = Instantiate(object_Drag.gameObject);
+        // object_Drag_Instance.transform.position = Input.mousePosition;
+        object_Drag_Instance.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 1);
         gameManager.draggingObject = object_Drag_Instance;
+
+        // object_Drag_Instance.GetComponent<ObjectDrag>().card = this;
     }
 
     public void OnPointerUp(PointerEventData eventData)

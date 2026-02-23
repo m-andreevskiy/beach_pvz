@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class ObjectContainer : MonoBehaviour
 {
     public bool isFull;
-    public GameManager gameManager;
-    public Image backgroundImage;
+    private GameManager gameManager;
+    public SpriteRenderer backgroundImage;
+    public Image backgroundImageCanvas;
     public int line;
 
     private void Start()
@@ -26,7 +27,13 @@ public class ObjectContainer : MonoBehaviour
     }
     public void OnTriggerExit2D(Collider2D collision)
     {
-        gameManager.currentContainer = null;
         backgroundImage.enabled = false;
+
+        if (isFull) 
+        {
+            return;
+        }
+        
+        // gameManager.currentContainer = null;
     }
 }
