@@ -111,7 +111,6 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        // Debug.Log("currentContainer = " + currentContainer);
 
         ObjectContainer containerScript = currentContainer.GetComponent<ObjectContainer>();
 

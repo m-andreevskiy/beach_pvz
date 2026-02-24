@@ -6,33 +6,47 @@ using UnityEngine.UIElements;
 public class TutorialManager : MonoBehaviour
 {
 
-    [SerializeField] private GameObject[] popups;
-    [SerializeField] private float[] popupsWaitTime;
+    [SerializeField] private TutorialPopupBase[] popups;
     [SerializeField] private GameObject enemySpawner;
     [SerializeField] private GameObject pearlSpawner;
-    [SerializeField] private int stateWithAccessToBuildCastle_1 = 6;
+    [SerializeField] private GameObject deadline;
+    [SerializeField] private GameObject UIResources;
+    [SerializeField] private GameObject UICastle1;
+    [SerializeField] private GameObject UICastle2;
+    [SerializeField] private GameObject UIChild;
+
+
 
     private int currentState = 0;
     private float waitTime = 3;
     private bool keepCounting = true;
+    private ObjectCastleCard scriptCastle1;
 
 
-    public bool CanBuildCastle_1()
-    {
-        return currentState >= stateWithAccessToBuildCastle_1;
-    }
+    public bool isComplete = false;
+    
+
+
 
     void Start()
     {
-        waitTime = popupsWaitTime[0];
+        waitTime = popups[0].GetWaitTime();
+        scriptCastle1 = UICastle1.GetComponent<ObjectCastleCard>();
+        scriptCastle1.isFirstCastle = true;
+
         enemySpawner.SetActive(false);
         pearlSpawner.SetActive(false);
+        deadline.SetActive(false);
+        UIResources.SetActive(false);
+        UICastle1.SetActive(false);
+        UICastle2.SetActive(false);
+        UIChild.SetActive(false);
     }
 
 
     void Update()
     {
-        if (currentState >= popupsWaitTime.Length)
+        if (currentState >= popups.Length)
         {
             /** Tutorial ended */
             return;
@@ -40,22 +54,27 @@ public class TutorialManager : MonoBehaviour
 
         if (keepCounting)
         {
-            waitTime -= Time.deltaTime;
+            waitTime -= Time.unscaledDeltaTime;
             if (waitTime <= 0)
             {
+                popups[currentState].gameObject.SetActive(true);
+                keepCounting = false;
+
                 switch (currentState)
                 {
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
+
                     case 4:
-                    case 5:
-                    case 6:
-                        popups[currentState].SetActive(true);
-                        keepCounting = false;
+                        Time.timeScale = 0.2f;
                         break;
 
+                    case 7:
+                        UICastle1.SetActive(true);
+                        deadline.SetActive(true);
+                        break;
+
+                    case 8:
+                        scriptCastle1.enabled = false;
+                        break;
                     
 
 
@@ -74,18 +93,28 @@ public class TutorialManager : MonoBehaviour
                     enemySpawner.SetActive(true);
                 }
 
-                if (currentState == 4)
+
+                /** Start building castle */
+                if (currentState == 13)
                 {
-                    pearlSpawner.SetActive(true);
+                    scriptCastle1.isFirstCastle = false;
+
+                    scriptCastle1.enabled = true;
+                    scriptCastle1.OnPointerUp(null);
                 }
 
+                // if (currentState == 4)
+                // {
+                //     pearlSpawner.SetActive(true);
+                // }
 
-                popups[currentState].SetActive(false);
+
+                popups[currentState].Disappear();
                 currentState++;
-                if (currentState < popupsWaitTime.Length)
+                if (currentState < popups.Length)
                 {
                     keepCounting = true;
-                    waitTime = popupsWaitTime[currentState];
+                    waitTime = popups[currentState].GetWaitTime();
                 }
 
             }

@@ -90,6 +90,8 @@ public class CastleBuilder : MonoBehaviour
 
     public void Init(Vector3 position, int line, ObjectDrag objectDrag, ObjectContainer container)
     {
+        Time.timeScale = 1;
+        
         gameManager.globalCastle = Instantiate(objectDrag.GetPrefab(), position, Quaternion.identity);
         gameManager.globalCastle.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
         gameManager.globalCastle.GetComponent<CastleBase>().line = line;

@@ -12,6 +12,7 @@ public class ObjectCastleCard : MonoBehaviour, IDragHandler, IPointerDownHandler
     [SerializeField] private TMP_Text clayCostText;
     [SerializeField] private TMP_Text pearlsCostText;
 
+    public bool isFirstCastle = false;
     public Canvas canvas;
     private GameObject object_Drag_Instance;
     private GameManager gameManager;
@@ -54,6 +55,12 @@ public class ObjectCastleCard : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (isFirstCastle)
+        {
+            // Dirty way to correctly guide palyer through the tutorial
+            return;
+        }
+
         gameManager.PlaceObject(object_Drag);
         gameManager.draggingObject = null;
         Destroy(object_Drag_Instance);
