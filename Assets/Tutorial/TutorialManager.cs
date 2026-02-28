@@ -46,6 +46,13 @@ public class TutorialManager : MonoBehaviour
 
     void Start()
     {
+        if (PlayerPrefs.GetInt("tutorial") == 0)
+        {
+            isComplete = true;
+            this.enabled = false;
+            return;
+        }
+
         /** Fill in popup list */
         popupList = new TutorialPopupBase[popupsObject.transform.childCount];
         int childIndex = 0;

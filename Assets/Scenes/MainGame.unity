@@ -5590,7 +5590,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012089414303896494, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
       propertyPath: upcomingWaitTime
-      value: 9
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2596426104520711461, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
       propertyPath: m_Name
@@ -7696,10 +7696,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5177265919873885358, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
       insertIndex: -1
       addedObject: {fileID: 726068155}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8537175026042410171, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 0}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
 --- !u!4 &1163619887 stripped
 Transform:
