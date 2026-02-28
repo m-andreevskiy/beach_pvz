@@ -4609,7 +4609,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2012089414303896494, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
       propertyPath: upcomingWaitTime
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2596426104520711461, guid: 0461d6697a07bfb4db4e05c79ed53285, type: 3}
       propertyPath: m_Name
@@ -6576,7 +6576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 2128118208}
   pearlPrefab: {fileID: 1060844810679162170, guid: f552c8beeea6ab349b284b07fee4f2fb, type: 3}
-  spawnRate: 5
+  spawnRate: 3
 --- !u!4 &975379322
 Transform:
   m_ObjectHideFlags: 0
@@ -14418,16 +14418,20 @@ MonoBehaviour:
   clayAmountText: {fileID: 1581708053}
   pearlsAmountText: {fileID: 690085162}
   resourceStorage: {fileID: 1964358947}
+  mouseBlockingPanel: {fileID: 1438625750}
   draggingObject: {fileID: 2936447044084916548, guid: 8ce188c59d9b87646a1e71c44ffa979f, type: 3}
   currentContainer: {fileID: 0}
   gameGoesOn: 1
   allEnemiesSpawned: 0
   globalCastle: {fileID: 0}
-  testEnemy: {fileID: 0}
+  pearlObjects: []
   mainCamera: {fileID: 1806073431}
-  sandAmount: 100
-  clayAmount: 100
+  sandAmount: 10
+  clayAmount: 10
   pearlsAmount: 10
+  sandAmountStart: 20
+  clayAmountStart: 20
+  pearlsAmountStart: 10
 --- !u!82 &2128118209
 AudioSource:
   m_ObjectHideFlags: 0

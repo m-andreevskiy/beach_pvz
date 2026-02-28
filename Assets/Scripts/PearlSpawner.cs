@@ -31,14 +31,15 @@ public class PearlSpawner : MonoBehaviour
 
         if (spawnTimer >= BASE_SPAWN_TIME / spawnRate)
         {
-        spawnTimer = 0;
+            spawnTimer = 0;
 
-        spawnPos.x = Random.Range(collider.bounds.min.x, collider.bounds.max.x);
-        spawnPos.y = Random.Range(collider.bounds.min.y, collider.bounds.max.y);
+            spawnPos.x = Random.Range(collider.bounds.min.x, collider.bounds.max.x);
+            spawnPos.y = Random.Range(collider.bounds.min.y, collider.bounds.max.y);
 
-        GameObject newPearl = Instantiate(pearlPrefab, spawnPos, Quaternion.identity);
-        newPearl.GetComponent<PearlBase>().gameManager = gameManager;
-
+            GameObject newPearl = Instantiate(pearlPrefab, spawnPos, Quaternion.identity);
+            newPearl.GetComponent<PearlBase>().gameManager = gameManager;
+            
+            gameManager.SpawnPearl(newPearl);
         }
 
     }
