@@ -136,7 +136,7 @@ public class CastleBuilder : MonoBehaviour
             }
         }
 
-        if (receiversAreEnabled)
+        if (receiversAreEnabled && !gameManager.IsGamePaused())
         {
             if (Input.GetKeyDown(KeyCode.Q) && fallingLetters[0].Count > 0)
             {

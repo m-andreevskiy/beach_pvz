@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
 
             foreach (GameObject gameObject in SceneManager.GetSceneByName("MainGame").GetRootGameObjects())
             {
-                if (gameObject.name != "GameManager")
+                if (gameObject.name != "GameManager" && gameObject.name != "EventSystem")
                 {
                     gameObject.SetActive(false);
                     if (gameObject.name == "MiniGame")

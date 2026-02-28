@@ -6,7 +6,9 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
 
-  [SerializeField] private GameObject pauseMenu; 
+  [SerializeField] private GameObject pauseMenuCanvas;
+  [SerializeField] private GameObject pauseMenu;
+  [SerializeField] private GameObject mouseBlockingPanel; 
 
   private bool isPaused = false;
   private float timeScale = 1; 
@@ -23,6 +25,7 @@ public class PauseMenu : MonoBehaviour
   {
     isPaused = false;
     pauseMenu.SetActive(false);
+    mouseBlockingPanel.SetActive(false);
     gameManager = GetComponent<GameManager>();
   }
 
@@ -56,6 +59,8 @@ public class PauseMenu : MonoBehaviour
     }
 
     pauseMenu.SetActive(true);
+    pauseMenuCanvas.SetActive(true);
+    mouseBlockingPanel.SetActive(true);
 
     timeScale = Time.timeScale;
     Time.timeScale = 0f;
@@ -65,6 +70,7 @@ public class PauseMenu : MonoBehaviour
   public void Unpause()
   {
     pauseMenu.SetActive(false);
+    mouseBlockingPanel.SetActive(false);
     Time.timeScale = timeScale;
     isPaused = false;
   }
