@@ -12,8 +12,10 @@ public class ObjectCastleCard : MonoBehaviour, IDragHandler, IPointerDownHandler
     [SerializeField] private TMP_Text clayCostText;
     [SerializeField] private TMP_Text pearlsCostText;
 
+    public bool isFirstCastle = false;
+    public bool proceedTutorial = false;
     public Canvas canvas;
-    private GameObject object_Drag_Instance;
+    public GameObject object_Drag_Instance;
     private GameManager gameManager;
 
     private void Start()
@@ -54,8 +56,17 @@ public class ObjectCastleCard : MonoBehaviour, IDragHandler, IPointerDownHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        if (isFirstCastle 
+        && gameManager.currentContainer != null 
+        && gameManager.currentContainer.GetComponent<ObjectContainer>().backgroundImage.enabled == true
+        )
+        {
+            // Dirty way to correctly guide palyer through the tutorial
+            // Start the first building of a castle with a delay (in TutorialManager)
+            return;
+        }
+
         gameManager.PlaceObject(object_Drag);
-        gameManager.draggingObject = null;
         Destroy(object_Drag_Instance);
     }
 }

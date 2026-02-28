@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
+    [SerializeField] private TutorialManager tutorialManager;
     [SerializeField] private EnemySpawner enemySpawner;
     [SerializeField] private GameEndMenu gameEndMenu;
     [SerializeField] private GameObject[] spawnLines;
@@ -111,7 +112,6 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
-        // Debug.Log("currentContainer = " + currentContainer);
 
         ObjectContainer containerScript = currentContainer.GetComponent<ObjectContainer>();
 
@@ -180,12 +180,18 @@ public class GameManager : MonoBehaviour
             }
 
             GameObject.Find("castleBuilder").GetComponent<CastleBuilder>().Init(position, newCastleLine, objectDrag, containerScript);
-
+            
         }
+        draggingObject = null;
     }
     public void PlaceObjectContinue()
     {
-        //Instantiate(draggingObject.GetComponent<ObjectDrag>().card.object_Game, currentContainer.transform);
+        if (!tutorialManager.isComplete)
+        {
+            tutorialManager.isPaused = false;
+            Time.timeScale = tutorialManager.slowedTimeScale_1;
+        }
+    
         castles.Add(globalCastle);
         globalCastle.GetComponent<CastleBase>().isBuilt = true;
     }
