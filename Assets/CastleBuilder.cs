@@ -61,6 +61,7 @@ public class CastleBuilder : MonoBehaviour
 
     public float DDRLettersSpawnHeightOffset = 3;
     public float DDRLettersBaseSpawnHeight = 10;
+    public bool receiversAreEnabled = true;
 
 
     AudioManager audioManager;
@@ -90,7 +91,6 @@ public class CastleBuilder : MonoBehaviour
 
     public void Init(Vector3 position, int line, ObjectDrag objectDrag, ObjectContainer container)
     {
-        Time.timeScale = 1;
         
         gameManager.globalCastle = Instantiate(objectDrag.GetPrefab(), position, Quaternion.identity);
         gameManager.globalCastle.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
@@ -136,35 +136,38 @@ public class CastleBuilder : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && fallingLetters[0].Count > 0)
+        if (receiversAreEnabled)
         {
-            wind = receiver_0.calculateWind(fallingLetters[0].First<GameObject>());
-            // print(wind);
-            LaunchPreparedBrick(wind, receiver_0.receiverID);
-        }
+            if (Input.GetKeyDown(KeyCode.Q) && fallingLetters[0].Count > 0)
+            {
+                wind = receiver_0.calculateWind(fallingLetters[0].First<GameObject>());
+                // print(wind);
+                LaunchPreparedBrick(wind, receiver_0.receiverID);
+            }
 
 
-        if (Input.GetKeyDown(KeyCode.W) && fallingLetters[1].Count > 0)
-        {
-            wind = receiver_1.calculateWind(fallingLetters[1].First<GameObject>());
-            // print(wind);
-            LaunchPreparedBrick(wind, receiver_1.receiverID);
-        }
+            if (Input.GetKeyDown(KeyCode.W) && fallingLetters[1].Count > 0)
+            {
+                wind = receiver_1.calculateWind(fallingLetters[1].First<GameObject>());
+                // print(wind);
+                LaunchPreparedBrick(wind, receiver_1.receiverID);
+            }
 
 
-        if (Input.GetKeyDown(KeyCode.E) && fallingLetters[2].Count > 0)
-        {
-            wind = receiver_2.calculateWind(fallingLetters[2].First<GameObject>());
-            // print(wind);
-            LaunchPreparedBrick(wind, receiver_2.receiverID);
-        }
+            if (Input.GetKeyDown(KeyCode.E) && fallingLetters[2].Count > 0)
+            {
+                wind = receiver_2.calculateWind(fallingLetters[2].First<GameObject>());
+                // print(wind);
+                LaunchPreparedBrick(wind, receiver_2.receiverID);
+            }
 
 
-        if (Input.GetKeyDown(KeyCode.R) && fallingLetters[3].Count > 0)
-        {
-            wind = receiver_3.calculateWind(fallingLetters[3].First<GameObject>());
-            // print(wind);
-            LaunchPreparedBrick(wind, receiver_3.receiverID);
+            if (Input.GetKeyDown(KeyCode.R) && fallingLetters[3].Count > 0)
+            {
+                wind = receiver_3.calculateWind(fallingLetters[3].First<GameObject>());
+                // print(wind);
+                LaunchPreparedBrick(wind, receiver_3.receiverID);
+            }
         }
 
 
