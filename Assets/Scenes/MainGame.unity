@@ -330,7 +330,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -3568,6 +3568,7 @@ GameObject:
   - component: {fileID: 582089844}
   - component: {fileID: 582089843}
   - component: {fileID: 582089842}
+  - component: {fileID: 582089845}
   m_Layer: 5
   m_Name: ExitButton
   m_TagString: Untagged
@@ -3689,6 +3690,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582089840}
   m_CullTransparentMesh: 1
+--- !u!114 &582089845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582089840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a6721e2c83fae4198f4c8100362c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBase
 --- !u!1 &598537449
 GameObject:
   m_ObjectHideFlags: 0
@@ -8057,7 +8070,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -11834,6 +11847,7 @@ GameObject:
   - component: {fileID: 1845874644}
   - component: {fileID: 1845874643}
   - component: {fileID: 1845874642}
+  - component: {fileID: 1845874645}
   m_Layer: 5
   m_Name: ReturnButton
   m_TagString: Untagged
@@ -11955,6 +11969,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1845874640}
   m_CullTransparentMesh: 1
+--- !u!114 &1845874645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845874640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a6721e2c83fae4198f4c8100362c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonBase
 --- !u!224 &1854718101 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6337194034340092812, guid: 9ef683bdba483b649acf64c5764212b6, type: 3}
