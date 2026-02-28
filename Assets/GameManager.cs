@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+[RequireComponent(typeof(PauseMenu))]
 public class GameManager : MonoBehaviour
 {
 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text clayAmountText;
     [SerializeField] private TMP_Text pearlsAmountText;
     [SerializeField] private ResourceStorage resourceStorage;
+    [SerializeField] private GameObject mouseBlockingPanel; 
 
     public GameObject draggingObject;
     public GameObject currentContainer;
@@ -28,13 +30,16 @@ public class GameManager : MonoBehaviour
 
     public GameObject globalCastle = null;
     public List<GameObject>[] enemies = new List<GameObject>[3];
-    public GameObject testEnemy;
+    public List<GameObject> pearlObjects = new();
     public Camera mainCamera;
     public static GameManager instance;
     List<GameObject> castles = new List<GameObject>();
-    [SerializeField] private int sandAmount = 100;
-    [SerializeField] private int clayAmount= 100;
-    [SerializeField] private int pearlsAmount = 100;
+    [SerializeField] private int sandAmount = 10;
+    [SerializeField] private int clayAmount = 10;
+    [SerializeField] private int pearlsAmount = 10;
+    [SerializeField] private int sandAmountStart = 10;
+    [SerializeField] private int clayAmountStart = 10;
+    [SerializeField] private int pearlsAmountStart = 10;
 
     private void Awake()
     {
@@ -50,6 +55,9 @@ public class GameManager : MonoBehaviour
             enemies[i] = new List<GameObject>();
         }
 
+        sandAmount = sandAmountStart;
+        clayAmount = clayAmountStart;
+        pearlsAmount = pearlsAmountStart;
     }
 
     private void Update()
@@ -103,6 +111,11 @@ public class GameManager : MonoBehaviour
     {
         enemies[line].Add(enemy);
         enemy.transform.position = spawnLines[line].transform.position + new UnityEngine.Vector3(0, 0, -1);
+    }
+
+    public void SpawnPearl(GameObject pearl)
+    {
+        pearlObjects.Add(pearl);
     }
 
 
@@ -169,7 +182,7 @@ public class GameManager : MonoBehaviour
 
             foreach (GameObject gameObject in SceneManager.GetSceneByName("MainGame").GetRootGameObjects())
             {
-                if (gameObject.name != "GameManager")
+                if (gameObject.name != "GameManager" && gameObject.name != "EventSystem")
                 {
                     gameObject.SetActive(false);
                     if (gameObject.name == "MiniGame")
@@ -221,6 +234,7 @@ public class GameManager : MonoBehaviour
 
         Time.timeScale = 1f;
         gameEndMenu.gameObject.SetActive(false);
+        mouseBlockingPanel.SetActive(false);
 
         foreach(var line in enemies)
         {
@@ -234,6 +248,17 @@ public class GameManager : MonoBehaviour
         {
             Destroy(castle);
         }
+
+        foreach(var pearl in pearlObjects)
+        {
+            Destroy(pearl);
+        }
+
+
+        sandAmount = sandAmountStart;
+        clayAmount = clayAmountStart;
+        pearlsAmount = pearlsAmountStart;
+
     }
 
     public bool IsGamePaused()
